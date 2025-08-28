@@ -2,12 +2,12 @@
 
 ## 📋 Información del Proyecto
 
-**Desarrollado por:** [Tu Nombre Completo]  
+**Desarrollado por:** Santiago Ibarra
 **Curso:** 7° año 2° división - Turno Tarde  
 **Materia:** Proyecto de Implementación de Sitios web Dinámicos  
 **Institución:** EEST N.º 1 "Eduardo Ader" - Vicente López  
 **Fecha:** Agosto 2025
-
+**Link:** https://github.com/SantiagoIbarraa/TPN14SantiIbarra7mo2da
 ## 🎯 Descripción
 
 Este proyecto es un **Generador de Códigos QR** desarrollado como parte de la **Actividad 14** de PWD. Permite crear códigos QR personalizados para proyectos web, repositorios, documentación y recursos académicos, ideal para usar en exposiciones técnicas y presentaciones.
@@ -188,5 +188,6 @@ Este proyecto está bajo la **Licencia MIT**. Consultá el archivo [LICENSE](LIC
 ---
 
 **📚 Desarrollado con 💛 para PWD 7° 2° - EEST N.º 1 "Eduardo Ader"**
+
 
 *¡Si tu proyecto querés mostrar y visualizar, con un QR la vas a romper! 📱*
