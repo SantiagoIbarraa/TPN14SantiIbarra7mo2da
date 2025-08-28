@@ -1,0 +1,398 @@
+/* 🎨 Generador de Códigos QR - Estilos CSS (Tema Cyber Tech) */
+/* PWD 7° 2° - EEST N.º 1 "Eduardo Ader" */
+
+/* Variables CSS para el nuevo tema */
+:root {
+    --primary-accent: #00e5ff; /* Cian eléctrico */
+    --secondary-accent: #ff00e5; /* Magenta */
+    --error-color: #ff4d4d;
+    --success-color: #4dff88;
+    --info-color: #00b8d4;
+    
+    --bg-primary: #12121c; /* Fondo principal oscuro */
+    --bg-secondary: #1f1f2b; /* Fondo de elementos */
+    --bg-tertiary: #2e2e3a;
+    --bg-gradient: linear-gradient(135deg, #2a004f 0%, #002d4f 100%);
+    
+    --text-primary: #e0e0e0; /* Texto principal claro */
+    --text-secondary: #a0a0a0; /* Texto secundario */
+    --text-light: #ffffff;
+    
+    --shadow-glow: 0 0 15px rgba(0, 229, 255, 0.2);
+    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.25);
+    
+    --border-radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Tamaños de fuente consistentes */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.75rem;
+    --font-size-3xl: 2.5rem;
+}
+
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevenir scroll horizontal */
+}
+
+/* Header */
+.header {
+    background: var(--bg-gradient);
+    color: var(--text-light);
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-accent);
+}
+
+.title {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px var(--primary-accent);
+}
+
+.subtitle {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Caja del generador */
+.generator-box {
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--bg-tertiary);
+    box-shadow: var(--shadow-medium);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.generator-box:hover {
+    box-shadow: var(--shadow-glow);
+}
+
+/* Secciones internas */
+.info-section, .form-section, .qr-section {
+    padding: 2rem;
+}
+
+/* Estilo Glassmorphism para la sección de info */
+.info-section {
+    background: rgba(46, 46, 58, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--bg-tertiary);
+    color: var(--text-light);
+}
+
+.info-section h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: 1.5rem;
+    color: var(--primary-accent);
+}
+
+.use-cases {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.use-cases li {
+    background: rgba(0, 229, 255, 0.1);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--primary-accent);
+    transition: var(--transition);
+}
+
+.use-cases li:hover {
+    background: rgba(0, 229, 255, 0.2);
+    transform: scale(1.03);
+}
+
+/* Sección de formulario */
+.form-section h2 {
+    font-size: var(--font-size-xl);
+    color: var(--primary-accent);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Grupos de input */
+.input-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: var(--font-size-sm);
+}
+
+.url-input, .select-input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--bg-tertiary);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    transition: var(--transition);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+}
+
+.url-input:focus, .select-input:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+}
+
+.hint {
+    display: block;
+    color: var(--text-secondary);
+    font-size: var(--font-size-xs);
+    margin-top: 0.5rem;
+}
+
+/* Fila de personalización */
+.customization-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Botones */
+.generate-btn, .download-btn, .clear-btn {
+    padding: 1rem 2rem;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.generate-btn {
+    background: var(--primary-accent);
+    color: var(--bg-primary);
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+.generate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
+}
+
+/* Sección del QR */
+.qr-section {
+    text-align: center;
+}
+
+#qr-container {
+    margin-bottom: 2rem;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    border-radius: var(--border-radius);
+    border: 2px dashed var(--bg-tertiary);
+    transition: var(--transition);
+    padding: 1rem;
+}
+
+#qr-container:has(#qrcode img), #qr-container:has(#qrcode canvas) {
+    border: 2px solid var(--success-color);
+    box-shadow: 0 0 15px rgba(77, 255, 136, 0.3);
+}
+
+.qr-placeholder {
+    color: var(--text-secondary);
+    font-size: var(--font-size-lg);
+}
+
+#qrcode img, #qrcode canvas {
+    border-radius: 8px;
+    background: white; /* Asegurar fondo blanco para el QR */
+    padding: 10px; /* Espacio entre el QR y el borde */
+    box-shadow: var(--shadow-medium);
+}
+
+/* Botones de acción */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.download-btn {
+    background: var(--success-color);
+    color: var(--bg-primary);
+}
+
+.clear-btn {
+    background: var(--error-color);
+    color: var(--text-light);
+}
+
+.download-btn:hover:not(:disabled), .clear-btn:hover:not(:disabled) {
+    transform: scale(1.05);
+}
+
+.download-btn:disabled, .clear-btn:disabled {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Información del QR */
+.qr-info {
+    background: rgba(77, 255, 136, 0.1);
+    border: 1px solid var(--success-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.success-message {
+    color: var(--success-color);
+    font-weight: 600;
+}
+
+.test-hint {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+/* Sección de ayuda */
+.help-section {
+    background: transparent; /* Se apoya en el fondo del body */
+    padding: 2rem 0;
+}
+
+.help-section h2 {
+    text-align: center;
+    color: var(--primary-accent);
+    margin-bottom: 2rem;
+    font-size: var(--font-size-xl);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.tip-card {
+    background: rgba(31, 31, 43, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--bg-tertiary);
+    color: var(--text-primary);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-accent);
+    box-shadow: var(--shadow-glow);
+}
+
+.tip-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: 1rem;
+    color: var(--primary-accent);
+}
+
+/* Footer */
+.footer {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--bg-tertiary);
+}
+
+/* Alertas */
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    color: var(--text-light);
+    font-weight: 600;
+    box-shadow: var(--shadow-medium);
+    z-index: 1000;
+    transform: translateX(120%);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.alert.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.alert-success { background: var(--success-color); color: var(--bg-primary); }
+.alert-error { background: var(--error-color); }
+.alert-info { background: var(--info-color); color: var(--bg-primary); }
+
+/* Media Queries para Responsividad (Ajustes menores) */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    .header {
+        padding: 2rem 1rem;
+    }
+    .title {
+        font-size: var(--font-size-2xl);
+    }
+    .action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .alert {
+        right: 10px;
+        left: 10px;
+        transform: translateY(-150%);
+    }
+    .alert.show {
+        transform: translateY(0);
+    }
+}
